@@ -1,0 +1,52 @@
+.connect {
+  background: #161b27;
+  height: 370px;
+  color: #fff;
+  padding: 10px;
+  position: relative;
+}
+.connect img {
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  top: 2%;
+  right: 14%;
+}
+.connect .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.left {
+  flex: 1;
+  padding-top: 0px;
+}
+.left h1 {
+  padding: 50px 0 0 0;
+}
+.right {
+  text-align: left;
+  flex: 1;
+}
+.param {
+  padding-bottom: 20px;
+  width: 400px;
+  font-family: mukta;
+  color: #c4c4c4;
+}
+#free {
+  padding: 10px 20px;
+  background: #165bac;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 7px;
+  font-family: mukta;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.2px;
+  letter-spacing: 4%;
+}

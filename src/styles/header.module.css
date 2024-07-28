@@ -1,0 +1,43 @@
+.header {
+  background: rgb(245, 244, 238);
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  padding: 1px;
+  overflow: hidden;
+  width: 100%;
+  height: 70px;
+  /* margin-bottom: 20px; */
+}
+#logo {
+  height: 25px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 0.5em;
+}
+.getStarted a {
+  background: #165bac;
+  padding: 10px;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.list ul {
+  padding: 0px;
+}
+.list ul li {
+  display: inline;
+  padding: 10px;
+  color: #120d0d;
+  /* font-weight: 1em; */
+}

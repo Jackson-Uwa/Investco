@@ -1,0 +1,94 @@
+.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 380px;
+  /* position: relative; */
+}
+.wrapper {
+  position: relative;
+  /* height: 380px; */
+}
+.content {
+  width: 60%;
+  /* border: 2px solid #3e3e3e3e; */
+}
+.content h1 {
+  font-size: 22px;
+  padding-bottom: 40px;
+}
+.content h1::before {
+  content: url("../assets/leftquote.png");
+  margin: 0 10px 10px 0;
+}
+.content h1::after {
+  content: url("../assets/rightquote.png");
+  margin: 0 0 0 10px;
+}
+.details {
+  border-top: 1px solid #c4c4c4;
+  font-family: mukta;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr 5fr);
+  gap: 1em;
+  padding: 0.1em;
+}
+#portrait {
+  width: 70px;
+  height: 70px;
+}
+.imgWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+.brace {
+  position: absolute;
+  /* text-align: left; */
+  left: 14%;
+  z-index: 1;
+  top: 11.5%;
+}
+.details p {
+  margin: 0;
+}
+
+.name {
+  margin: 10px 0 0 0s;
+  padding: 20px 0 0 0;
+  font-family: sans-serif;
+  letter-spacing: 2%;
+  font-weight: 600;
+  font-size: 16px;
+}
+.text {
+  /* margin: 0 0 10px 0; */
+  padding: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #808080;
+  line-height: 25.9px;
+  font-family: mukta;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+}
+.nav {
+  text-align: right;
+}
+#leftCaret {
+  border: 1px solid #c4c4c4;
+  box-shadow: 1px 2px 5px #c4c4c4;
+  margin-right: 10px;
+  padding: 5px 8px;
+  filter: brightness(50%);
+  border-radius: 50%;
+}
+#rightCaret {
+  border: 2px solid #165bac;
+  padding: 5px 8px;
+  border-radius: 50%;
+}
