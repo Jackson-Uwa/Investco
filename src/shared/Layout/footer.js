@@ -6,8 +6,10 @@ const Footer = () => {
       <div className={styles.wrapper}>
         <div className={styles.top_footer}>
           <div className={styles.left}>
-            <h1>_Investico</h1>
-            <p>Bridging the gap between investors and business owners.</p>
+            <h1 className={styles.heading}>_Investico</h1>
+            <p className={styles.param}>
+              Bridging the gap between investors and business owners.
+            </p>
           </div>
           <div className={styles.right}>
             <div>

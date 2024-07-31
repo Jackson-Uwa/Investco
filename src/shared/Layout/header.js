@@ -1,6 +1,52 @@
+import { NavLink } from "react-router-dom";
 import styles from "../../styles/header.module.css";
 
 const image = require("../../assets/investico.png");
+
+const sidebar = (
+  <sidebar>
+    <div className={styles.list}>
+      <ul>
+        <li>
+          <NavLink
+            style={{ textDecoration: "none" }}
+            activeStyle={{ color: "#165BAC" }}
+            to="/"
+          >
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            style={{ textDecoration: "none" }}
+            activeStyle={{ color: "#165BAC" }}
+            to="/"
+          >
+            How it works
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            style={{ textDecoration: "none" }}
+            activeStyle={{ color: "#165BAC" }}
+            to="/"
+          >
+            About
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            style={{ textDecoration: "none" }}
+            activeStyle={{ color: "#165BAC" }}
+            to="/"
+          >
+            Contact
+          </NavLink>
+        </li>
+      </ul>
+    </div>
+  </sidebar>
+);
 
 const Header = () => {
   return (
@@ -9,16 +55,11 @@ const Header = () => {
         <div className={styles.logo}>
           <img src={image} id={styles.logo} alt="Logo" />
         </div>
-        <div className={styles.list}>
-          <ul>
-            <li>Home</li>
-            <li>How it works</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
-        </div>
+        <>{sidebar}</>
         <div className={styles.getStarted}>
-          <a href="www.google.com">Get started</a>
+          <NavLink to="/register" style={{ textDecoration: "none" }}>
+            Get started
+          </NavLink>
         </div>
       </div>
     </header>

@@ -1,0 +1,158 @@
+@media (min-width: 769px) {
+  .signup {
+    height: 700px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+  .signleft {
+    padding: 0.1em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .signright {
+    height: 100%;
+    width: 100%;
+    background-image: url("../assets/frame.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+  }
+  .container {
+    width: 60%;
+    margin: auto;
+  }
+  .container h1 {
+    font-size: 20px;
+    padding: 0;
+  }
+  .signup label {
+    display: block;
+    padding: 5px 0 4px 0;
+    font-size: 14px;
+  }
+  .signup input {
+    width: 100%;
+    height: 35px;
+    padding-left: 5px;
+    font-family: mukta;
+  }
+  .signup input:focus {
+    outline: none;
+  }
+  .signup input::placeholder {
+    font-size: 14px;
+    font-weight: 600;
+    /* font-style: italic; */
+  }
+  #signwithgoogle {
+    color: #000000;
+    border: 1px solid blue;
+    border-radius: 6px;
+    border: 1px solid #c4c4c4;
+    padding: 10px;
+    font-size: 14px;
+    font-family: mukta;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 4%;
+    line-height: 23.27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .left {
+    height: 100%;
+    background: #fff;
+  }
+  .bgimg {
+    height: 100%;
+  }
+  #dash {
+    z-index: 1;
+    width: 500px;
+    position: absolute;
+    top: 200px;
+    left: 80px;
+  }
+  #google {
+    width: 24px;
+    height: 24px;
+    padding: 0 5px 0 0;
+  }
+  .container form {
+    font-family: mukta;
+  }
+  #caveat {
+    color: #808080;
+    font-size: 14px;
+    margin: 3px 0 10px 0;
+  }
+  .createAccount,
+  .existingAccount {
+    text-align: center;
+  }
+  .createAccount {
+    background: #165bac;
+    color: #ffffff;
+    font-family: mukta;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 4%;
+    line-height: 23.27px;
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin: 0 0 5px 0;
+  }
+  .createAccount {
+    cursor: pointer;
+  }
+  .existingAccount {
+    letter-spacing: 1px;
+    color: #808080;
+  }
+  #login {
+    padding: 0 0 0 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: mukta;
+    color: #165bac;
+  }
+  .form_group {
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    position: relative;
+  }
+  .form_group input {
+    width: 100%;
+    height: 35px;
+    z-index: 1;
+    width: 100%;
+  }
+  .myinput {
+    width: 100%;
+  }
+  #eye {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 12px;
+    padding: 5px 5px 0 0;
+    text-align: right;
+    color: #808080;
+  }
+  #eye:hover {
+    cursor: pointer;
+  }
+}

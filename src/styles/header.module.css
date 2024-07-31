@@ -1,43 +1,101 @@
-.header {
-  background: rgb(245, 244, 238);
-  position: sticky;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 999;
-  padding: 1px;
-  overflow: hidden;
-  width: 100%;
-  height: 70px;
-  /* margin-bottom: 20px; */
+@media (min-width: 769px) {
+  .header {
+    background: rgb(245, 244, 238);
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    padding: 1em;
+    overflow: hidden;
+    width: 100vw;
+    height: 70px;
+    /* margin-bottom: 20px; */
+  }
+  #logo {
+    height: 25px;
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+  }
+  .getStarted {
+    padding-right: 30px;
+  }
+  .getStarted a {
+    background: #165bac;
+    padding: 10px;
+    border-radius: 6px;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+  .list ul {
+    padding: 0px;
+  }
+  .list ul li {
+    display: inline;
+    padding: 10px;
+    color: #4a4a68;
+  }
 }
-#logo {
-  height: 25px;
-  margin-left: 10px;
-  margin-top: 5px;
-}
-.content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  padding: 0.5em;
-}
-.getStarted a {
-  background: #165bac;
-  padding: 10px;
-  border-radius: 6px;
-  color: #fff;
-  text-decoration: none;
-  margin-right: 10px;
-  margin-top: 5px;
-}
-.list ul {
-  padding: 0px;
-}
-.list ul li {
-  display: inline;
-  padding: 10px;
-  color: #120d0d;
-  /* font-weight: 1em; */
+
+@media (max-width: 768px) {
+  .header {
+    background: rgb(245, 244, 238);
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    padding: 1em;
+    overflow: hidden;
+    width: 100vw;
+    height: 50px;
+    /* margin-bottom: 20px; */
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+  }
+  #logo {
+    height: 25px;
+    /* margin-left: 10px; */
+    margin: 5px 0 0 5px;
+  }
+  .logo {
+    flex: 1;
+  }
+  .getStarted {
+    /* padding-right: 30px; */
+    text-align: right;
+    flex: 2;
+    padding: 0 1em 0 0;
+  }
+  .getStarted a {
+    background: #165bac;
+    padding: 7px 15px;
+    border-radius: 6px;
+    color: #fff;
+    text-decoration: none;
+  }
+  .list {
+    display: none;
+    flex: 2;
+  }
+  .list ul {
+    padding: 0px;
+  }
+  .list ul li {
+    display: inline;
+    padding: 0px 7px 0 0;
+    color: #4a4a68;
+  }
 }

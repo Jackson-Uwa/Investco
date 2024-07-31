@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styles from "../styles/section_c.module.css";
 
 import code from "../assets/code.png";
@@ -18,9 +19,11 @@ const SectionC = (props) => {
             Investee. A Comprehensive platform bridging the gap between
             Investors and Investee.
           </p>
-          <a href="www.google.com" id={styles.started}>
-            Get Started
-          </a>
+          <NavLink to="/register">
+            <a href="www.google.com" id={styles.started}>
+              Get Started
+            </a>
+          </NavLink>
         </div>
         <div className={styles.right}>
           {/* <img src={graph} alt="graph" className={styles.graph} /> */}

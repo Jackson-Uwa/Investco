@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styles from "../styles/section_a.module.css";
 
 import image1 from "../assets/pf1.png";
@@ -17,7 +18,7 @@ const SectionA = (props) => {
           Invest or get funding
           <br /> for your business
         </h1>
-        <p>
+        <p className={styles.param}>
           A comprehensive platform, bridging the gap between the investors and
           investee.
         </p>
@@ -40,12 +41,30 @@ const SectionA = (props) => {
             </li>
           </ul>
           <div className={styles.members}>
-            Members Now 23k{" "}
+            Members Now 23k
             <span id={styles.caret} class="fa-solid fa-caret-right"></span>
           </div>
         </div>
         <div className={styles.detailCon}>
-          <span id={styles.works}>Get started</span>
+          <span id={styles.works}>
+            <NavLink
+              style={{
+                textDecoration: "none",
+                color: "#ffff",
+                // fontFamily: "mukta",
+                padding: "12px 25px",
+                background: "#000",
+                borderRadius: "10px",
+                fontFamily: "mukta",
+                fontSize: "18px",
+                letterSpacing: "0px",
+              }}
+              // activeStyle={{ color: "#165BAC" }}
+              to="/register"
+            >
+              Get started
+            </NavLink>
+          </span>
           <span id={styles.see}>See how it works</span>
         </div>
         <div className={styles.mainframe}>

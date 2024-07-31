@@ -7,7 +7,10 @@ const Connect = (props) => {
     <div className={styles.connect}>
       <div className={styles.container}>
         <div className={styles.left}>
-          <h1>Let's connect with Investors or get funding today!</h1>
+          <h1>
+            Let's connect with Investors
+            <br /> or get funding today!
+          </h1>
           <p className={styles.param}>
             A Comprehensive platform bridging the gap between investors and
             investee.
