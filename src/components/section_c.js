@@ -26,7 +26,6 @@ const SectionC = (props) => {
           </NavLink>
         </div>
         <div className={styles.right}>
-          {/* <img src={graph} alt="graph" className={styles.graph} /> */}
           <img src={code} alt="programmer" />
         </div>
       </div>

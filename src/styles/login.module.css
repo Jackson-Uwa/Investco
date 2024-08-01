@@ -17,7 +17,6 @@
     flex: 3;
     height: 100%;
     width: 100%;
-    /* background: blue; */
     background-image: url("../assets/frame.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -76,6 +75,7 @@
     padding-left: 5px;
     font-family: mukta;
     font-size: 16px;
+    /* font-weight: 200; */
   }
   input:focus {
     outline: none;
