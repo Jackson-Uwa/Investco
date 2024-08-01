@@ -28,6 +28,13 @@
     font-family: mukta;
     padding: 1em;
   }
+  .top .right {
+    padding-bottom: 20px;
+  }
+  #text {
+    font-family: mukta;
+    padding-bottom: 10px;
+  }
   #learn {
     text-align: center;
     background: #000;
