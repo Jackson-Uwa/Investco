@@ -28,6 +28,14 @@
     font-family: mukta;
     padding: 1em;
   }
+  #learn {
+    text-align: center;
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
 }
 
 @media (min-width: 769px) {
