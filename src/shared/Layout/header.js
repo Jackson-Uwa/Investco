@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import styles from "../../styles/header.module.css";
 
 const image = require("../../assets/investico.png");
@@ -53,7 +53,9 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.content}>
         <div className={styles.logo}>
-          <img src={image} id={styles.logo} alt="Logo" />
+          <Link to="/">
+            <img src={image} id={styles.logo} alt="Logo" />
+          </Link>
         </div>
         <>{sidebar}</>
         <div className={styles.getStarted}>
