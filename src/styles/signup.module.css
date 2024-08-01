@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: #e1e9f1;
   }
   .signleft {
     padding: 0.1em;
@@ -70,17 +71,7 @@
   }
   .left {
     height: 100%;
-    background: #fff;
-  }
-  .bgimg {
-    height: 100%;
-  }
-  #dash {
-    z-index: 1;
-    width: 500px;
-    position: absolute;
-    top: 200px;
-    left: 80px;
+    background: #e1e9f1;
   }
   #google {
     width: 24px;
