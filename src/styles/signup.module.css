@@ -2,6 +2,7 @@
   .signup {
     height: 100%;
     width: 100vw;
+    padding: 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;

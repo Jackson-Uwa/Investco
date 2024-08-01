@@ -2,6 +2,7 @@
   .footer {
     width: 100vw;
     height: 100%;
+    padding: 1em;
     background: #1b1c31;
     color: rgb(185, 182, 182);
     overflow: hidden;
