@@ -11,7 +11,7 @@ import Home from "../pages/home";
 import Register from "../pages/register";
 import Login from "../pages/login";
 import PasswordPage from "../pages/forgot_pass";
-
+import DashBoard from "../pages/dashboard";
 // import ForgotPassword from "../components/forgot_pass/forgot_pass";
 
 const App = () => {
@@ -30,6 +30,9 @@ const App = () => {
           </Route>
           <Route path="/forgot-password">
             <PasswordPage />
+          </Route>
+          <Route path="/dashboard">
+            <DashBoard />
           </Route>
           <Redirect to="/" />
         </Switch>
