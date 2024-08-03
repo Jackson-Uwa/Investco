@@ -11,7 +11,10 @@
   padding: 1em;
   flex: 1;
 }
-
+.sidebar h3 {
+  font-size: 10px;
+  color: #4a4b68;
+}
 .list_icon_dashboard {
   background: #165bac;
   width: 200px;
