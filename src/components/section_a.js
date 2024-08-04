@@ -65,7 +65,9 @@ const SectionA = (props) => {
               Get started
             </NavLink>
           </span>
-          <span id={styles.see}>See how it works</span>
+          <NavLink to="/dashboard">
+            <span id={styles.see}>See how it works</span>
+          </NavLink>
         </div>
         <div className={styles.mainframe}>
           <img src={dashboard} alt="dashboard" />
