@@ -20,7 +20,7 @@ const sidebar = (
           <NavLink
             style={{ textDecoration: "none" }}
             activeStyle={{ color: "#165BAC" }}
-            to="/"
+            to="/dashboard"
           >
             How it works
           </NavLink>

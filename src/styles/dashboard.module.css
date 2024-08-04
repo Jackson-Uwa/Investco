@@ -42,6 +42,11 @@
   align-items: center;
   /* float: left; */
 }
+.list_icon:hover,
+.list_icon_dashboard:hover {
+  cursor: pointer;
+  color: #93a753;
+}
 .list_icon img,
 span {
   padding-right: 1em;
@@ -163,12 +168,13 @@ h3 {
 .bot_board .plastic_business {
   background: #edf3fa;
   padding: 1em 2em;
-  letter-spacing: 1px;
+  font-size: 14px;
+  /* letter-spacing: 1px; */
   text-align: center;
   border-radius: 5px;
 }
 .bot_board .plastic_business span {
-  padding-left: 1em;
+  padding-left: 10px;
 }
 .rate {
   display: flex;
@@ -179,7 +185,7 @@ h3 {
   background: #ece9ff;
   border-radius: 5px;
   font-size: 24px;
-  /* margin-right: 1em; */
+  margin-right: 1em;
 }
 .clicks {
   padding: 1em;
