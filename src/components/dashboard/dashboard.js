@@ -1,4 +1,5 @@
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
 import styles from "../../styles/dashboard.module.css";
 
 import dash from "../../assets/dashboard/dash.png";
@@ -22,24 +23,57 @@ const DashBoard = (props) => {
             <div className={styles.top_info}>
               <h3>Investee</h3>
               <div className={styles.list_icon_dashboard}>
-                <img src={dash} alt="dashboard" /> <span>Dashboard</span>
+                <img src={dash} alt="dashboard" />{" "}
+                <NavLink
+                  style={{ textDecoration: "none", color: "#fff" }}
+                  activeStyles={{ color: "#c4c4c4" }}
+                  to="/dashboard"
+                >
+                  <span>Dashboard</span>
+                </NavLink>
               </div>
               <div className={styles.list_icon}>
                 <img src={business} alt="business icon" />
-                <span>My Business</span>
+                <NavLink
+                  style={{ textDecoration: "none", color: "#080808" }}
+                  activeStyles={{ color: "#c4c4c4" }}
+                  to="/my-business"
+                >
+                  <span>My Business</span>
+                </NavLink>
               </div>
               <div className={styles.list_icon}>
                 <span class="fa-solid fa-circle-info"></span>
-                <span>Information</span>
+                <NavLink
+                  style={{ textDecoration: "none", color: "#080808" }}
+                  activeStyles={{ color: "#c4c4c4" }}
+                  to="/info"
+                >
+                  <span>Information</span>
+                </NavLink>
               </div>
             </div>
             <div className={styles.mid_info}>
               <h3>Security</h3>
               <div className={styles.list_icon}>
-                <img src={settings} alt="settings icon" /> Settings
+                <img src={settings} alt="settings icon" />
+                <NavLink
+                  style={{ textDecoration: "none", color: "#080808" }}
+                  activeStyles={{ color: "#c4c4c4" }}
+                  to="/settings"
+                >
+                  Settings
+                </NavLink>
               </div>
               <div className={styles.list_icon}>
-                <img src={support} alt="support icon" /> Support
+                <img src={support} alt="support icon" />
+                <NavLink
+                  to="/support"
+                  style={{ textDecoration: "none", color: "#080808" }}
+                  activeStyles={{ color: "#c4c4c4" }}
+                >
+                  Support
+                </NavLink>
               </div>
               <div className={styles.list_icon}>
                 <img src={roles} alt="roles icon" /> Switch Roles
