@@ -65,7 +65,10 @@ const SectionA = (props) => {
               Get started
             </NavLink>
           </span>
-          <NavLink to="/dashboard">
+          <NavLink
+            style={{ textDecoration: "none", color: "#0000" }}
+            to="/dashboard"
+          >
             <span id={styles.see}>See how it works</span>
           </NavLink>
         </div>
