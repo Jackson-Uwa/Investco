@@ -19,8 +19,14 @@
     /* color: #fff; */
     padding: 1em;
     height: 100%;
-    width: 50%;
+    width: 35%;
     animation: slide 2s;
+    border-right: 1px solid #165bac;
+    /* border-bottom: 10px solid #165bac; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
     /* transform: translateX(-50%); */
   }
   @keyframes slide {
