@@ -1,70 +1,50 @@
 import { NavLink, Link } from "react-router-dom";
 import styles from "../../styles/header.module.css";
 
+import List from "../../components/list";
+import { useState, Fragment } from "react";
+
 const image = require("../../assets/investico.png");
 
-const sidebar = (
-  <sidebar>
-    <div className={styles.list}>
-      <ul>
-        <li>
-          <NavLink
-            style={{ textDecoration: "none" }}
-            activeStyle={{ color: "#165BAC" }}
-            to="/"
-          >
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            style={{ textDecoration: "none" }}
-            activeStyle={{ color: "#165BAC" }}
-            to="/dashboard"
-          >
-            How it works
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            style={{ textDecoration: "none" }}
-            activeStyle={{ color: "#165BAC" }}
-            to="/"
-          >
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            style={{ textDecoration: "none" }}
-            activeStyle={{ color: "#165BAC" }}
-            to="/"
-          >
-            Contact
-          </NavLink>
-        </li>
-      </ul>
-    </div>
-  </sidebar>
-);
-
 const Header = () => {
+  const [click, setClick] = useState(false);
+  // const content = <List />;
+
+  const changeClick = () => {
+    const cl = click;
+    setClick(!cl);
+  };
+
+  const sidebar = <List />;
+
+  let content;
+  if (click) {
+    content = <List />;
+  }
   return (
-    <header className={styles.header}>
-      <div className={styles.content}>
-        <div className={styles.logo}>
-          <Link to="/">
-            <img src={image} id={styles.logo} alt="Logo" />
-          </Link>
+    <Fragment>
+      <header className={styles.header}>
+        <div className={styles.list}>{content}</div>
+        <div className={styles.content}>
+          <div className={styles.logo}>
+            <Link to="/">
+              <img src={image} id={styles.logo} alt="Logo" />
+            </Link>
+          </div>
+          <div className={styles.side}>{sidebar}</div>
+          <div className={styles.getStarted}>
+            <NavLink to="/register" style={{ textDecoration: "none" }}>
+              Get started
+            </NavLink>
+          </div>
+          <span
+            id={styles.bar}
+            onClick={changeClick}
+            class={click ? "fa-solid fa-times" : "fa-solid fa-bars"}
+          ></span>
         </div>
-        <>{sidebar}</>
-        <div className={styles.getStarted}>
-          <NavLink to="/register" style={{ textDecoration: "none" }}>
-            Get started
-          </NavLink>
-        </div>
-      </div>
-    </header>
+      </header>
+    </Fragment>
   );
 };
 

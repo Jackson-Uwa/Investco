@@ -1,34 +1,84 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import styles from "../../styles/login.module.css";
 import dashboard from "../../assets/new-dash.png";
 
 const SignIn = (props) => {
+  const [visibility, setVisibility] = useState(true);
+  const [userEmail, setUserEmail] = useState("");
+  const [userPass, setUserPass] = useState("");
+
+  // const [userDetails, setUserDetails] = useState();
+
+  const changeEmailHandler = (event) => {
+    setUserEmail(event.target.value);
+  };
+
+  const changePassHandler = (event) => {
+    setUserPass(event.target.value);
+  };
+
+  const ToggleVisibility = () => {
+    const vs = visibility;
+    setVisibility(!vs);
+  };
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    const userLogs = {
+      email: userEmail,
+      password: userPass,
+    };
+
+    console.log(userLogs);
+  };
+
   return (
     <div className={styles.login}>
       <div className={styles.signleft}>
         <div className={styles.container}>
           <h1>Login</h1>
-          <form>
+          <form onSubmit={submitHandler}>
             <label>Email</label>
             <input
               type="email"
               name="email"
               autoComplete="off"
+              required
               placeholder="Enter your email address"
-              value=""
+              onChange={changeEmailHandler}
+              value={userEmail}
             />
             <label>Password</label>
-            <input
-              type="password"
-              name="password"
-              autoComplete="off"
-              placeholder="Enter your password"
-              value=""
-            />
+            <div className={styles.pass}>
+              <input
+                type={visibility ? "password" : "text"}
+                name="password"
+                autoComplete="off"
+                required
+                placeholder="Enter your password"
+                onChange={changePassHandler}
+                value={userPass}
+              />
+              <span
+                id={styles.eye}
+                onClick={ToggleVisibility}
+                class={
+                  visibility
+                    ? "fa-duotone fa-solid fa-eye-slash"
+                    : "fa-solid fa-eye"
+                }
+              ></span>
+            </div>
             <p className={styles.forgot}>
               <NavLink to="/forgot-password">Forgot Password?</NavLink>
             </p>
-            <p id={styles.login}>Log In</p>
+            <input
+              // onSubmit={submitHandler}
+              type="submit"
+              value="Log In"
+              id={styles.login}
+            />
             <div className={styles.noAccount}>
               Dont Have An Account?
               <NavLink

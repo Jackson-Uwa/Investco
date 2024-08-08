@@ -1,10 +1,47 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import styles from "../../styles/signup.module.css";
 
 import dashboard from "../../assets/new-dash.png";
 import googleLens from "../../assets/googlelens.png";
 
 const SignUp = (props) => {
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [phone, setPhone] = useState();
+  const [password, setPassword] = useState();
+
+  const [visible, setVisible] = useState(false);
+
+  const toggle = () => {
+    setVisible((prev) => !prev);
+  };
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    const userLogs = {
+      username: name,
+      mail: email,
+      phone: phone,
+      password: password,
+    };
+
+    console.log(userLogs);
+  };
+
+  const nameChangeHandler = (event) => {
+    setName(event.target.value);
+  };
+  const emailChangeHandler = (event) => {
+    setEmail(event.target.value);
+  };
+  const phoneChangeHandler = (event) => {
+    setPhone(event.target.value);
+  };
+  const passwordChangeHandler = (event) => {
+    setPassword(event.target.value);
+  };
+
   return (
     <div className={styles.signup}>
       <div className={styles.signleft}>
@@ -25,51 +62,70 @@ const SignUp = (props) => {
               Sign Up With Google
             </p>
             <div className={styles.form}>
-              <form>
+              <form onSubmit={submitHandler}>
                 <label>Name*</label>
                 <input
                   type="text"
                   name="name"
+                  required
                   autoComplete="off"
                   placeholder="Enter your name"
-                  value=""
+                  onChange={nameChangeHandler}
+                  value={name}
                 />
                 <label>Email*</label>
                 <input
                   type="email"
                   name="email"
+                  required
                   autoComplete="off"
                   placeholder="Enter your email"
-                  value=""
+                  onChange={emailChangeHandler}
+                  value={email}
                 />
                 <label>Phone number*</label>
                 <input
                   type="text"
                   name="phone"
+                  required
                   autoComplete="off"
                   placeholder="Enter your phone number"
-                  value=""
+                  onChange={phoneChangeHandler}
+                  value={phone}
                 />
                 <label>Password*</label>
 
                 <div className={styles.form_group}>
                   <div className={styles.myinput}>
                     <input
-                      type="password"
+                      type={visible ? "text" : "password"}
                       name="password"
+                      required
                       autoComplete="off"
                       placeholder="Enter your password"
-                      value=""
+                      onChange={passwordChangeHandler}
+                      value={password}
                     />
                   </div>
 
                   <div id={styles.eye}>
-                    <span class="fa-solid fa-eye"></span>
+                    <span
+                      class={
+                        visible
+                          ? "fa-solid fa-eye"
+                          : "fa-duotone fa-solid fa-eye-slash"
+                      }
+                      onClick={toggle}
+                    ></span>
                   </div>
                 </div>
                 <label id={styles.caveat}>Must be at least 8 characters</label>
 
-                <div className={styles.createAccount}>Create Account</div>
+                <input
+                  className={styles.createAccount}
+                  type="submit"
+                  value="Create Account"
+                />
                 <div className={styles.existingAccount}>
                   Already Have An Account?
                   <span>

@@ -325,7 +325,7 @@
 
   /* end of  side bar styles */
   .greetings h1 {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 700;
     font-family: mukta;
     padding: 1em 0 0 0;
@@ -350,7 +350,7 @@
   }
   .search input {
     width: 100%;
-    height: 50px;
+    height: 40px;
     padding-left: 2em;
     border: 1px solid #fff;
     box-shadow: 1px 3px 4px #c4c4c4;
@@ -389,7 +389,7 @@
     margin: 0 1em;
   }
   .figures {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
     font-family: mukta;
     margin: 0;

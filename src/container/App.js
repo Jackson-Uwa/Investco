@@ -5,6 +5,8 @@ import {
   Redirect,
 } from "react-router-dom";
 
+// import { useMemo } from "react";
+
 import Layout from "../shared/Layout/layout";
 
 import Home from "../pages/home";

@@ -1,0 +1,35 @@
+@media (min-width: 769px) {
+  .list ul {
+    padding: 0px;
+  }
+  .list ul li {
+    display: inline;
+    padding: 10px;
+    color: #4a4a68;
+  }
+}
+@media (max-width: 768px) {
+  .list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #f6f7f8;
+    /* color: #fff; */
+    padding: 1em;
+    height: 100vh;
+    width: 50%;
+  }
+  .list ul {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+  .list ul li {
+    padding: 10px;
+    /* color: #fff !important; */
+  }
+  .first {
+    /* color: #fff !important; */
+  }
+}

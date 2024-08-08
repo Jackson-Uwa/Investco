@@ -254,16 +254,18 @@
     text-align: center;
   }
   .createAccount {
+    /* height: 45px; */
     background: #165bac;
     color: #ffffff;
     font-family: mukta;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 4%;
     line-height: 23.27px;
     border-radius: 6px;
-    padding: 10px 20px;
+    padding: 5px 20px;
     margin: 0 0 5px 0;
+    border: 1px solid #165bac;
   }
   .createAccount {
     cursor: pointer;

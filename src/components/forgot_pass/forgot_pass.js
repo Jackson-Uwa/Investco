@@ -1,10 +1,25 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import styles from "../../styles/forgot_pass.module.css";
 
 import arrow from "../../assets/arrow.png";
 import dashboard from "../../assets/new-dash.png";
 
 const ForgotPassword = (props) => {
+  const [password, setPassword] = useState("");
+
+  const changeHandler = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    const userLogs = {
+      pass: password,
+    };
+    console.log(userLogs);
+  };
+
   return (
     <div className={styles.forgotpass}>
       <div className={styles.signleft}>
@@ -13,16 +28,22 @@ const ForgotPassword = (props) => {
           <div className={styles.text}>
             No worries, we will send your reset instructions
           </div>
-          <form>
+          <form onSubmit={submitHandler}>
             <label>Email</label>
             <input
               type="email"
               name="email"
+              required
               autoComplete="off"
+              onChange={changeHandler}
               placeholder="Enter your email address"
-              value=""
+              value={password}
             />
-            <p className={styles.reset}>Reset Password?</p>
+            <input
+              type="submit"
+              className={styles.reset}
+              value="Reset Password?"
+            />
             <div className={styles.back}>
               <img src={arrow} alt="Arrow Icon" />
               <NavLink style={{ textDecoration: "none" }} to="/login">

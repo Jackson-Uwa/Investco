@@ -10,6 +10,13 @@
     width: 100vw;
     height: 50px;
   }
+  #bar {
+    background: #165bac;
+    padding: 7px 15px;
+    /* filter: blur(10px); */
+    border-radius: 6px;
+    color: #fff;
+  }
   .content {
     display: flex;
     justify-content: space-between;
@@ -36,8 +43,11 @@
     color: #fff;
     text-decoration: none;
   }
-  .list {
+  .side {
     display: none;
+  }
+  .list {
+    /* display: none; */
     flex: 2;
   }
   .list ul {
@@ -63,6 +73,9 @@
     width: 100vw;
     height: 70px;
     /* margin-bottom: 20px; */
+  }
+  #bar {
+    display: none;
   }
   #logo {
     height: 25px;

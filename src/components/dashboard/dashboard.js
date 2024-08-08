@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 import styles from "../../styles/dashboard.module.css";
 
@@ -15,6 +16,11 @@ import messageIcon from "../../assets/dashboard/decline.png";
 import searchIcon from "../../assets/dashboard/search.png";
 
 const DashBoard = (props) => {
+  const [text, setText] = useState("");
+
+  const changeHandler = (event) => {
+    setText(event.target.value);
+  };
   return (
     <div className={styles.dashboard}>
       <aside className={styles.sidebar}>
@@ -89,7 +95,13 @@ const DashBoard = (props) => {
       </aside>
       <div className={styles.main}>
         <div className={styles.search}>
-          <input name="search" type="search" value="" placeholder="Search..." />
+          <input
+            name="search"
+            type="search"
+            value={text}
+            onChange={changeHandler}
+            placeholder="Search..."
+          />
 
           <img id={styles.search} src={searchIcon} alt="search" />
         </div>
