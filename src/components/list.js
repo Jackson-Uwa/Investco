@@ -1,11 +1,9 @@
 import { NavLink } from "react-router-dom";
 import styles from "../styles/list.module.css";
-import logo from "../assets/investico.png";
 
 const List = (props) => {
   return (
     <div className={styles.list}>
-      <img src={logo} alt="" />
       <ul>
         <li>
           <NavLink

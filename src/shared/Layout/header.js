@@ -6,7 +6,7 @@ import { useState, Fragment } from "react";
 
 const image = require("../../assets/investico.png");
 
-const Header = () => {
+const Header = (props) => {
   const [click, setClick] = useState(false);
   // const content = <List />;
 
@@ -15,6 +15,9 @@ const Header = () => {
     setClick(!cl);
   };
 
+  const closeBar = () => {
+    setClick(false);
+  };
   const sidebar = <List />;
 
   let content;
@@ -23,7 +26,7 @@ const Header = () => {
   }
   return (
     <Fragment>
-      <header className={styles.header}>
+      <header className={styles.header} onClick={closeBar}>
         <div className={styles.list}>{content}</div>
         <div className={styles.content}>
           <div className={styles.logo}>
