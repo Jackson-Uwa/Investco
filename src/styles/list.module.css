@@ -13,23 +13,33 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    right: 0;
+    z-index: 999;
     background: #f6f7f8;
     /* color: #fff; */
     padding: 1em;
-    height: 100vh;
+    height: 100%;
     width: 50%;
+    animation: slide 2s;
+    /* transform: translateX(-50%); */
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
   }
   .list ul {
     padding: 0px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .list ul li {
     padding: 10px;
-    /* color: #fff !important; */
-  }
-  .first {
     /* color: #fff !important; */
   }
 }
