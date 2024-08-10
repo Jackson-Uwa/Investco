@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import styles from "../../styles/signup.module.css";
+import styles from "../../styles/logs/signup.module.css";
 
 import dashboard from "../../assets/new-dash.png";
 import googleLens from "../../assets/googlelens.png";

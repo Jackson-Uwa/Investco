@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import styles from "../../styles/login.module.css";
+import styles from "../../styles/logs/login.module.css";
 import dashboard from "../../assets/new-dash.png";
 
 const SignIn = (props) => {
@@ -74,7 +74,6 @@ const SignIn = (props) => {
               <NavLink to="/forgot-password">Forgot Password?</NavLink>
             </p>
             <input
-              // onSubmit={submitHandler}
               type="submit"
               value="Log In"
               id={styles.login}

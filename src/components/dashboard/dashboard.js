@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
-import styles from "../../styles/dashboard.module.css";
+import styles from "../../styles/comps/dashboard.module.css";
 
 import dash from "../../assets/dashboard/dash.png";
 import business from "../../assets/dashboard/business.png";

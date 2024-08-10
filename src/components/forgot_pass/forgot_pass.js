@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import styles from "../../styles/forgot_pass.module.css";
+import styles from "../../styles/logs/forgot_pass.module.css";
 
 import arrow from "../../assets/arrow.png";
 import dashboard from "../../assets/new-dash.png";

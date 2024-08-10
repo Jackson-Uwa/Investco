@@ -5,16 +5,13 @@ import {
   Redirect,
 } from "react-router-dom";
 
-// import { useMemo } from "react";
-
 import Layout from "../shared/Layout/layout";
 
-import Home from "../pages/home";
-import Register from "../pages/register";
-import Login from "../pages/login";
-import PasswordPage from "../pages/forgot_pass";
-import DashBoard from "../pages/dashboard";
-// import ForgotPassword from "../components/forgot_pass/forgot_pass";
+import Home from "../pages/home/home";
+import Register from "../pages/register/register";
+import Login from "../pages/log/login";
+import PasswordPage from "../pages/forgot/forgot_pass";
+import DashBoard from "../pages/dashboard/dashboard";
 
 const App = () => {
   return (
