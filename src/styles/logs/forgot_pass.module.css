@@ -1,0 +1,209 @@
+@media (max-width: 768px) {
+  .forgotpass {
+    height: 100%;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #e1e9f1;
+  }
+  .signleft {
+    padding: 1em;
+    height: 100%;
+  }
+  .signright {
+    height: 100%;
+    width: 100%;
+    /* background: blue; */
+    background-image: url("../../assets/frame.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: none;
+  }
+  .container {
+    width: 95%;
+    margin: auto;
+    padding: 20px;
+  }
+  .back {
+    border-radius: 6px;
+    border: 1px solid #e1e9f1;
+    padding: 5px;
+    font-size: 14px;
+    font-family: mukta;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 4%;
+    line-height: 23.27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .back #login {
+    font-family: mukta;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #808080;
+    padding-left: 3px;
+  }
+  label {
+    display: block;
+    padding: 10px 0px;
+    font-size: 16px;
+    font-family: mukta;
+    font-weight: 700;
+    color: #000000;
+  }
+  input {
+    width: 100%;
+    height: 40px;
+    padding-left: 5px;
+    font-family: mukta;
+    font-size: 16px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid #c4c4c4;
+  }
+  input:focus {
+    outline: none;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  .text {
+    color: #4a4a68;
+    font-family: mukta;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25.9px;
+    letter-spacing: 2%;
+  }
+  .reset {
+    background: #165bac;
+    color: #ffffff;
+    text-align: center;
+    font-family: mukta;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 23.27px;
+    border-radius: 5px;
+    padding: 10px 18px;
+    margin: 20px 0 10px 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .forgotpass {
+    height: 700px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+  .signleft {
+    padding: 1em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .signright {
+    height: 100%;
+    width: 100%;
+    /* background: blue; */
+    background-image: url("../../assets/frame.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .container {
+    width: 60%;
+    margin: auto;
+  }
+  .bgimg {
+    height: 100%;
+  }
+  #dash {
+    z-index: 1;
+    width: 500px;
+    position: absolute;
+    top: 200px;
+    left: 80px;
+  }
+  .back {
+    border-radius: 6px;
+    border: 1px solid #fff;
+    padding: 5px;
+    font-size: 14px;
+    font-family: mukta;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 4%;
+    line-height: 23.27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .back #login {
+    font-family: mukta;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #808080;
+    padding-left: 3px;
+  }
+  label {
+    display: block;
+    padding: 10px 0px;
+    font-size: 16px;
+    font-family: mukta;
+    font-weight: 700;
+    color: #000000;
+  }
+  input {
+    width: 100%;
+    height: 30px;
+    padding-left: 5px;
+    font-family: mukta;
+    font-size: 16px;
+  }
+  input:focus {
+    outline: none;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  .text {
+    color: #4a4a68;
+    font-family: mukta;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25.9px;
+    letter-spacing: 2%;
+  }
+  .reset {
+    height: 45px;
+    background: #165bac;
+    color: #ffffff;
+    text-align: center;
+    font-family: mukta;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 23.27px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 20px 0 10px 0;
+  }
+}

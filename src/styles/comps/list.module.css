@@ -1,0 +1,32 @@
+@media (min-width: 769px) {
+  .list ul {
+    padding: 0px;
+  }
+  .list ul li {
+    display: inline;
+    padding: 10px;
+    color: #4a4a68;
+  }
+}
+@media (max-width: 768px) {
+  /* @keyframes slide {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  } */
+  .list ul {
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .list ul li {
+    padding: 1px;
+    /* color: #fff !important; */
+  }
+}
