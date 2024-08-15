@@ -1,0 +1,29 @@
+/* .rating {
+  color: white;
+  background: black;
+} */
+/* 
+.rating {
+} */
+
+ul {
+  padding: 0px;
+}
+ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 4px;
+}
+
+ul li input {
+  /* padding: 10px 15px; */
+  /* background: #0000; */
+  border-radius: 50%;
+  margin: 2em 0;
+  background: #483939;
+  color: #fff;
+}
+
+ul li input:hover {
+  cursor: pointer;
+}

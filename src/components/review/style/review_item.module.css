@@ -1,0 +1,35 @@
+.review_card {
+  background: #165bac;
+  text-align: center;
+  padding: 1em;
+  margin: 0.5em 0;
+  width: 100%;
+  border-radius: 10px;
+}
+.review_card .times {
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}
+.review_card .times span {
+  font-size: 15px;
+  color: aliceblue;
+  background: #181b1f;
+  padding: 5px 7px;
+  border-radius: 50%;
+}
+.review_card span:hover {
+  cursor: pointer;
+}
+.rating {
+  color: #ffff;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+.review {
+  color: #ffff;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}

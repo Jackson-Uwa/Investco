@@ -1,0 +1,55 @@
+.add_feed {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 23px;
+}
+
+.form_group {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 40px;
+  width: 100%;
+}
+
+.form_group input {
+  border-radius: 10px;
+  padding: 0.3em 0.3em 0.3em 0.5em;
+  font-size: 15px;
+  font-family: mukta, sans-serif;
+  border: 0.1px solid #c4c4c4;
+  letter-spacing: 0.5px;
+  width: 100%;
+  /* position: absolute; */
+}
+
+.form_group input::placeholder {
+  letter-spacing: 0.5px;
+  color: #c4c4c4;
+  font-size: 15px;
+  font-family: mukta, sans-serif;
+}
+
+.form_group input:focus {
+  outline: none;
+}
+
+.form_group button {
+  color: #fff;
+  background: rgba(2, 16, 25);
+  padding: 0.5em 1.2em;
+  position: absolute;
+  top: 13%;
+  left: 80%;
+  height: 30px;
+  border: 1px solid rgba(2, 16, 25);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+.form_group button:hover {
+  cursor: pointer;
+}
