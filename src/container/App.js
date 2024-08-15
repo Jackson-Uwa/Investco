@@ -13,6 +13,8 @@ import Login from "../pages/log/login";
 import PasswordPage from "../pages/forgot/forgot_pass";
 import DashBoard from "../pages/dashboard/dashboard";
 
+import Review from "../pages/reviews/review";
+
 const App = () => {
   return (
     <Router>
@@ -32,6 +34,9 @@ const App = () => {
           </Route>
           <Route path="/dashboard">
             <DashBoard />
+          </Route>
+          <Route path="/feedback-reviews">
+            <Review />
           </Route>
           <Redirect to="/" />
         </Switch>

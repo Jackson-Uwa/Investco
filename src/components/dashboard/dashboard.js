@@ -29,7 +29,7 @@ const DashBoard = (props) => {
             <div className={styles.top_info}>
               <h3>Investee</h3>
               <div className={styles.list_icon_dashboard}>
-                <img src={dash} alt="dashboard" />{" "}
+                <img src={dash} alt="dashboard" />
                 <NavLink
                   style={{ textDecoration: "none", color: "#fff" }}
                   activeStyles={{ color: "#c4c4c4" }}
@@ -74,7 +74,7 @@ const DashBoard = (props) => {
               <div className={styles.list_icon}>
                 <img src={support} alt="support icon" />
                 <NavLink
-                  to="/support"
+                  to="/feedback-reviews"
                   style={{ textDecoration: "none", color: "#080808" }}
                   activeStyles={{ color: "#c4c4c4" }}
                 >
@@ -86,7 +86,14 @@ const DashBoard = (props) => {
               </div>
             </div>
             <div className={styles.bottom_info}>
-              <div className={styles.list_icon}>
+              <div
+                className={styles.list_icon}
+                onClick={() =>
+                  console.log(
+                    `${window.confirm("Are you sure you want to Logout?")}`
+                  )
+                }
+              >
                 <img src={logout} alt="logout icon" /> Logout
               </div>
             </div>

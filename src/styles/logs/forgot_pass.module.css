@@ -87,6 +87,7 @@
   }
   .reset {
     background: #165bac;
+    border: 1px solid #165bac;
     color: #ffffff;
     text-align: center;
     font-family: mukta;
@@ -97,6 +98,9 @@
     border-radius: 5px;
     padding: 10px 18px;
     margin: 20px 0 10px 0;
+  }
+  .reset:hover {
+    cursor: pointer;
   }
 }
 
@@ -118,7 +122,6 @@
   .signright {
     height: 100%;
     width: 100%;
-    /* background: blue; */
     background-image: url("../../assets/frame.png");
     background-size: cover;
     background-position: center;
@@ -130,14 +133,19 @@
     margin: auto;
   }
   .bgimg {
+    /* object-fit: cover; */
     height: 100%;
+    width: 100%;
   }
   #dash {
     z-index: 1;
     width: 500px;
+    /* height: 100%; */
+    /* object-fit: cover; */
     position: absolute;
     top: 200px;
     left: 80px;
+    /* margin: 0; */
   }
   .back {
     border-radius: 6px;
@@ -193,8 +201,9 @@
     letter-spacing: 2%;
   }
   .reset {
-    height: 45px;
     background: #165bac;
+    border: 1px solid #165bac;
+    height: 45px;
     color: #ffffff;
     text-align: center;
     font-family: mukta;
@@ -205,5 +214,8 @@
     border-radius: 5px;
     padding: 10px 20px;
     margin: 20px 0 10px 0;
+  }
+  .reset:hover {
+    cursor: pointer;
   }
 }

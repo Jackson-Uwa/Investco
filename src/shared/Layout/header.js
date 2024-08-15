@@ -17,7 +17,7 @@ const Header = (props) => {
         <div className={styles.side}>{sidebar}</div>
         <div className={styles.getStarted}>
           <NavLink to="/register" style={{ textDecoration: "none" }}>
-            Get started
+            Get Started
           </NavLink>
         </div>
         <span
