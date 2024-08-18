@@ -6,10 +6,12 @@ import dashboard from "../../assets/new-dash.png";
 import googleLens from "../../assets/googlelens.png";
 
 const SignUp = (props) => {
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [phone, setPhone] = useState();
-  const [password, setPassword] = useState();
+  const [values, setValues] = useState({
+    username: "",
+    email: "",
+    phone: "",
+    password: "",
+  });
 
   const [visible, setVisible] = useState(false);
 
@@ -20,26 +22,17 @@ const SignUp = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
     const userLogs = {
-      username: name,
-      mail: email,
-      phone: phone,
-      password: password,
+      username: values.username,
+      email: values.email,
+      phone: values.phone,
+      password: values.password,
     };
 
     console.log(userLogs);
   };
 
-  const nameChangeHandler = (event) => {
-    setName(event.target.value);
-  };
-  const emailChangeHandler = (event) => {
-    setEmail(event.target.value);
-  };
-  const phoneChangeHandler = (event) => {
-    setPhone(event.target.value);
-  };
-  const passwordChangeHandler = (event) => {
-    setPassword(event.target.value);
+  const changeHandler = (event) => {
+    setValues({ ...values, [event.target.name]: event.target.value });
   };
 
   return (
@@ -66,12 +59,12 @@ const SignUp = (props) => {
                 <label>Name*</label>
                 <input
                   type="text"
-                  name="name"
+                  name="username"
                   required
                   autoComplete="off"
                   placeholder="Enter your name"
-                  onChange={nameChangeHandler}
-                  value={name}
+                  onChange={changeHandler}
+                  value={values.username}
                 />
                 <label>Email*</label>
                 <input
@@ -80,8 +73,8 @@ const SignUp = (props) => {
                   required
                   autoComplete="off"
                   placeholder="Enter your email"
-                  onChange={emailChangeHandler}
-                  value={email}
+                  onChange={changeHandler}
+                  value={values.email}
                 />
                 <label>Phone number*</label>
                 <input
@@ -90,8 +83,8 @@ const SignUp = (props) => {
                   required
                   autoComplete="off"
                   placeholder="Enter your phone number"
-                  onChange={phoneChangeHandler}
-                  value={phone}
+                  onChange={changeHandler}
+                  value={values.phone}
                 />
                 <label>Password*</label>
 
@@ -103,8 +96,8 @@ const SignUp = (props) => {
                       required
                       autoComplete="off"
                       placeholder="Enter your password"
-                      onChange={passwordChangeHandler}
-                      value={password}
+                      onChange={changeHandler}
+                      value={values.password}
                     />
                   </div>
 
@@ -124,6 +117,7 @@ const SignUp = (props) => {
                 <input
                   className={styles.createAccount}
                   type="submit"
+                  disabled={false}
                   value="Create Account"
                 />
                 <div className={styles.existingAccount}>

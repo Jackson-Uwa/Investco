@@ -17,6 +17,7 @@
   background: #181b1f;
   padding: 5px 7px;
   border-radius: 50%;
+  margin: 2px;
 }
 .review_card span:hover {
   cursor: pointer;
@@ -32,4 +33,10 @@
   font-size: 14px;
   margin: 0;
   padding: 0;
+}
+#edit {
+  font-size: 14px;
+}
+#times {
+  margin: 0 0 0 0.5em;
 }

@@ -18,6 +18,7 @@ const ForgotPassword = (props) => {
       pass: password,
     };
     console.log(userLogs);
+    setPassword("");
   };
 
   return (

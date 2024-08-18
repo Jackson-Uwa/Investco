@@ -1,31 +1,20 @@
-import { AnimatePresence, motion } from "framer-motion";
+// import { AnimatePresence, motion } from "framer-motion";
+import { Fragment } from "react";
 import ReviewItem from "./review_item";
 
 const ReviewList = (props) => {
   return (
-    <AnimatePresence>
+    <Fragment>
       {props.reviews.map((rev) => (
         <ReviewItem
           delete={() => props.handleDelete(rev.id)}
+          edit={() => props.handleEdit(rev)}
           key={rev.id}
           rating={rev.rating}
           review={rev.review}
         />
-        // <motion.div
-        //   key={rev.id}
-        //   initial={{ opacity: 0 }}
-        //   animate={{ opacity: 1 }}
-        //   exit={{ opacity: 0 }}
-        // >
-        //   <ReviewItem
-        //     delete={() => props.handleDelete(rev.id)}
-        //     key={rev.id}
-        //     rating={rev.rating}
-        //     review={rev.review}
-        //   />
-        // </motion.div>
       ))}
-    </AnimatePresence>
+    </Fragment>
   );
 };
 

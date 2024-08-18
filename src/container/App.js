@@ -19,33 +19,33 @@ import Review from "../pages/reviews/review";
 
 const App = () => {
   return (
-    <FeedbackProvider>
-      <Router>
-        <Layout>
-          <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/register">
-              <Register />
-            </Route>
-            <Route path="/login">
-              <Login />
-            </Route>
-            <Route path="/forgot-password">
-              <PasswordPage />
-            </Route>
-            <Route path="/dashboard">
-              <DashBoard />
-            </Route>
-            <Route path="/feedback-reviews">
+    <Router>
+      <Layout>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/forgot-password">
+            <PasswordPage />
+          </Route>
+          <Route path="/dashboard">
+            <DashBoard />
+          </Route>
+          <Route path="/feedback-reviews">
+            <FeedbackProvider>
               <Review />
-            </Route>
-            <Redirect to="/" />
-          </Switch>
-        </Layout>
-      </Router>
-    </FeedbackProvider>
+            </FeedbackProvider>
+          </Route>
+          <Redirect to="/" />
+        </Switch>
+      </Layout>
+    </Router>
   );
 };
 

@@ -53,3 +53,10 @@ h1 {
 .form_group button:hover {
   cursor: pointer;
 }
+.message {
+  font-size: 12px;
+  color: red;
+  text-align: center;
+  transform: 1s all;
+  opacity: 0;
+}

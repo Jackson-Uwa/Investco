@@ -9,6 +9,10 @@ import ReviewList from "../../components/review/reviews/review_list";
 
 const Review = () => {
   const [feedback, setFeedback] = useState(FeedBack);
+  const [editFeedback, setEditFeedback] = useState({
+    item: {},
+    edit: false,
+  });
 
   const addFeed = (newFeedBack) => {
     newFeedBack.id = uuidv4();
@@ -17,8 +21,18 @@ const Review = () => {
   };
 
   const deleteFeed = (id) => {
-    if (window.confirm("Are you sure you want to delete this review")) {
+    if (window.confirm("Do you want to delete this review")) {
       setFeedback(feedback.filter((feed) => feed.id !== id));
+    }
+  };
+
+  const editFeed = (item) => {
+    if (window.confirm("Edit item")) {
+      setEditFeedback({
+        item,
+        edit: true,
+      });
+      console.log(editFeedback);
     }
   };
 
@@ -45,7 +59,11 @@ const Review = () => {
             </span>
             <span className={styles.average}>Average Rating: {average}</span>
           </div>
-          <ReviewList handleDelete={deleteFeed} reviews={feedback} />
+          <ReviewList
+            handleEdit={editFeed}
+            handleDelete={deleteFeed}
+            reviews={feedback}
+          />
         </div>
       )}
     </Fragment>

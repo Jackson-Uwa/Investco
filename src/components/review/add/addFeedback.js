@@ -7,6 +7,9 @@ const AddFeedBack = (props) => {
   const [review, setReview] = useState("");
   const [rating, setRating] = useState(10);
 
+  const [error, setError] = useState(false);
+  const [message, setMessage] = useState("");
+
   const changeHandler = (event) => setReview(event.target.value);
 
   const submitHandler = (e) => {
@@ -19,6 +22,11 @@ const AddFeedBack = (props) => {
     setReview("");
   };
 
+  // const validate = (event) => {
+  //   if (event.target.value === "") setMessage("Field cannot be empty.");
+  //   else if (event.target.value.trim() < 10)
+  //     setMessage("Review must be more than 10 characters!");
+  // };
   return (
     <div className={styles.add_feed}>
       <h1>How would you rate our services?</h1>
@@ -32,6 +40,7 @@ const AddFeedBack = (props) => {
             value={review}
             onChange={changeHandler}
           />
+          <p className={styles.message}>{message}</p>
           <button type="submit">Send</button>
         </div>
       </form>

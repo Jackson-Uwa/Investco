@@ -25,7 +25,7 @@ const Layout = (props) => {
     <Fragment>
       <Header click={changeClick} check={click} />
       {content}
-      <main onClick={closeBar}>{props.children}</main>
+      <main >{props.children}</main>
       <Footer />
     </Fragment>
   );
