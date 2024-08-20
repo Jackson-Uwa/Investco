@@ -37,7 +37,7 @@ const List = (props) => {
           <NavLink
             style={{ textDecoration: "none" }}
             activeStyle={{ color: "#165BAC" }}
-            to="/"
+            to="/feedback-reviews"
           >
             Contact
           </NavLink>
