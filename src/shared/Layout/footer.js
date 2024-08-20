@@ -1,8 +1,8 @@
 import styles from "../../styles/layout/footer.module.css";
 
-const Footer = () => {
+const Footer = (props) => {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} onClick={props.close}>
       <div className={styles.wrapper}>
         <div className={styles.top_footer}>
           <div className={styles.left}>
@@ -14,30 +14,30 @@ const Footer = () => {
           <div className={styles.right}>
             <div>
               <h3>Company</h3>
-              <ul>
+              <ol>
                 <li>About Us</li>
                 <li>Careers</li>
                 <li>Blog</li>
                 <li>Pricing</li>
-              </ul>
+              </ol>
             </div>
             <div>
               <h3>Product</h3>
-              <ul>
+              <ol>
                 <li>Invoicing Platform</li>
                 <li>Accounting Platform</li>
                 <li>Create Proposal</li>
                 <li>Contracts</li>
-              </ul>
+              </ol>
             </div>
             <div>
               <h3>Resources</h3>
-              <ul>
+              <ol>
                 <li>Proposal Template</li>
                 <li>Invoice Template</li>
                 <li>Tutorial</li>
                 <li>How to write a contract</li>
-              </ul>
+              </ol>
             </div>
           </div>
         </div>

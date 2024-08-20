@@ -7,7 +7,6 @@
     color: rgb(185, 182, 182);
     overflow: hidden;
     z-index: 999;
-    /* height: 300px; */
   }
   .footer .top_footer {
     display: flex;
@@ -23,13 +22,7 @@
     font-family: mukta;
     line-height: 1.3;
     letter-spacing: 2%;
-  }
-  .footer .low_footer {
-    width: 85%;
-    margin: auto;
-    padding: 0.5em;
-    color: #ffffff;
-    /* font-size: 14px; */
+    margin: 0;
     text-align: left;
   }
   .footer .right {
@@ -38,11 +31,11 @@
     gap: 1em;
     padding-top: 1em;
   }
-  .footer .right ul {
+  .footer .right ol {
     padding: 0;
     list-style: none;
   }
-  .footer .right ul li {
+  .footer .right ol li {
     line-height: 1.6;
     font-weight: 400;
     font-family: mukta;
@@ -50,7 +43,7 @@
     font-size: 15px;
     color: #ffffff;
   }
-  .footer .right ul li:hover {
+  .footer .right ol li:hover {
     color: rgb(185, 182, 182);
     cursor: pointer;
   }
@@ -62,6 +55,12 @@
     color: #fff;
     font-size: 16px;
     font-weight: 500;
+  }
+  .footer .low_footer {
+    width: 85%;
+    margin: auto;
+    padding: 0.5em;
+    color: #ffffff;
   }
   #copy {
     font-size: 14px;
@@ -72,9 +71,9 @@
 @media (min-width: 769px) {
   .footer {
     width: 100%;
+    height: 100%;
     background: #1b1c31;
     color: rgb(185, 182, 182);
-    /* min-height: 300px; */
   }
   .footer .top_footer {
     display: flex;
@@ -83,14 +82,6 @@
     margin: auto;
     padding: 1em;
   }
-  .heading {
-    font-size: 24px;
-    font-weight: 500;
-    font-family: mukta;
-    line-height: 36px;
-    letter-spacing: 2%;
-    /* margin: 0; */
-  }
   .footer .low_footer {
     width: 85%;
     margin: auto;
@@ -98,35 +89,43 @@
     color: #ffffff;
     font-size: 14px;
     text-align: left;
-    /* display: none; */
+  }
+  .heading {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: mukta;
+    line-height: 36px;
+    letter-spacing: 2%;
+    margin: 0;
+    text-align: left;
   }
   .footer .right {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2em;
     padding-top: 2em;
-    /* width: 100%; */
   }
-  .footer .right ul {
+  .footer .right ol {
     padding: 0;
+    margin: 0;
     list-style: none;
   }
-  .footer .right ul li {
+  .footer .right ol li {
     line-height: 1;
     font-weight: 400;
     font-family: mukta;
     letter-spacing: 1px;
+    line-height: 1.6;
     font-size: 14px;
     color: #ffffff;
-    /* padding: 0; */
+    display: block;
   }
-  .footer .right ul li:hover {
+  .footer .right ol li:hover {
     color: rgb(185, 182, 182);
     cursor: pointer;
   }
   .line {
     border: 0.1px solid #404444;
-    height: 0;
   }
   .wrapper h3 {
     color: #fff;
@@ -134,9 +133,6 @@
     font-weight: 500;
   }
   #copy {
-    /* font-size: 16px; */
     color: rgb(185, 182, 182);
-    /* margin: 0; */
-    /* text-align: center; */
   }
 }

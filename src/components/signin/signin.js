@@ -5,17 +5,13 @@ import dashboard from "../../assets/new-dash.png";
 
 const SignIn = (props) => {
   const [visibility, setVisibility] = useState(true);
-  const [userEmail, setUserEmail] = useState("");
-  const [userPass, setUserPass] = useState("");
+  const [userDetails, setUserDetails] = useState({
+    email: "",
+    password: "",
+  });
 
-  // const [userDetails, setUserDetails] = useState();
-
-  const changeEmailHandler = (event) => {
-    setUserEmail(event.target.value);
-  };
-
-  const changePassHandler = (event) => {
-    setUserPass(event.target.value);
+  const changeHandler = (e) => {
+    setUserDetails({ ...userDetails, [e.target.name]: e.target.value });
   };
 
   const ToggleVisibility = () => {
@@ -26,8 +22,8 @@ const SignIn = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
     const userLogs = {
-      email: userEmail,
-      password: userPass,
+      email: userDetails.email,
+      password: userDetails.password,
     };
 
     console.log(userLogs);
@@ -46,8 +42,8 @@ const SignIn = (props) => {
               autoComplete="off"
               required
               placeholder="Enter your email address"
-              onChange={changeEmailHandler}
-              value={userEmail}
+              onChange={changeHandler}
+              value={userDetails.email}
             />
             <label>Password</label>
             <div className={styles.pass}>
@@ -57,8 +53,8 @@ const SignIn = (props) => {
                 autoComplete="off"
                 required
                 placeholder="Enter your password"
-                onChange={changePassHandler}
-                value={userPass}
+                onChange={changeHandler}
+                value={userDetails.password}
               />
               <span
                 id={styles.eye}
@@ -73,11 +69,7 @@ const SignIn = (props) => {
             <p className={styles.forgot}>
               <NavLink to="/forgot-password">Forgot Password?</NavLink>
             </p>
-            <input
-              type="submit"
-              value="Log In"
-              id={styles.login}
-            />
+            <input type="submit" value="Log In" id={styles.login} />
             <div className={styles.noAccount}>
               Dont Have An Account?
               <NavLink

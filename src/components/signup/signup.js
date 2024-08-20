@@ -16,7 +16,8 @@ const SignUp = (props) => {
   const [visible, setVisible] = useState(false);
 
   const toggle = () => {
-    setVisible((prev) => !prev);
+    const show = visible;
+    setVisible(!show);
   };
 
   const submitHandler = (event) => {

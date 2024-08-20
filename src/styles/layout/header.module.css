@@ -61,10 +61,10 @@
     /* display: none; */
     flex: 2;
   }
-  .list ul {
+  .header .list ul {
     padding: 0px;
   }
-  .list ul li {
+  .header .list ul li {
     display: inline;
     padding: 0px 7px 0 0;
     color: #4a4a68;
@@ -112,10 +112,10 @@
     margin-top: 5px;
     font-size: 14px;
   }
-  .list ul {
+  .header .list ul {
     padding: 0px;
   }
-  .list ul li {
+  .header .list ul li {
     display: inline;
     padding: 10px;
     color: #4a4a68;

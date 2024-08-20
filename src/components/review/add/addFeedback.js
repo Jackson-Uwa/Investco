@@ -7,10 +7,22 @@ const AddFeedBack = (props) => {
   const [review, setReview] = useState("");
   const [rating, setRating] = useState(10);
 
-  const [error, setError] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(true);
   const [message, setMessage] = useState("");
 
-  const changeHandler = (event) => setReview(event.target.value);
+  const changeHandler = (event) => {
+    if (review === "") {
+      setIsDisabled(true);
+      setMessage("Review must not be empty!");
+    } else if (review !== "" && review.trim().length <= 10) {
+      setIsDisabled(true);
+      setMessage("Review must be at least 10 characters!");
+    } else {
+      setMessage(null);
+      setIsDisabled(false);
+    }
+    setReview(event.target.value);
+  };
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -22,11 +34,6 @@ const AddFeedBack = (props) => {
     setReview("");
   };
 
-  // const validate = (event) => {
-  //   if (event.target.value === "") setMessage("Field cannot be empty.");
-  //   else if (event.target.value.trim() < 10)
-  //     setMessage("Review must be more than 10 characters!");
-  // };
   return (
     <div className={styles.add_feed}>
       <h1>How would you rate our services?</h1>
@@ -36,13 +43,16 @@ const AddFeedBack = (props) => {
           <input
             type="text"
             name="review"
+            autoComplete="off"
             placeholder="Write a review"
             value={review}
             onChange={changeHandler}
           />
-          <p className={styles.message}>{message}</p>
-          <button type="submit">Send</button>
+          <button disabled={isDisabled} type="submit">
+            Send
+          </button>
         </div>
+        <p className={styles.message}>{message}</p>
       </form>
     </div>
   );
