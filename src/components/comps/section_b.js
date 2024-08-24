@@ -12,10 +12,10 @@ const SectionB = (props) => {
         <div className={styles.left}>
           <div className={styles.offering}>Offerings</div>
           <div className={styles.heading}>
-            <h1>
+            <h3>
               Get Many Advantages
               <br /> with our Platform
-            </h1>
+            </h3>
           </div>
         </div>
         <div className={styles.right}>

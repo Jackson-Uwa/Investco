@@ -11,11 +11,11 @@ const Quote = (props) => {
         <img className={styles.brace} src={curlyQuote} alt="quote" />
         <div className={styles.quote}>
           <div className={styles.content}>
-            <h1>
+            <h2>
               The _Investico Investment dashboard platform which I think is the
               best I have ever tried, displays very valuable Information with a
               pleasant user Interface
-            </h1>
+            </h2>
             {/* <hr /> */}
             <div className={styles.details}>
               <div className={styles.imgWrapper}>

@@ -21,7 +21,7 @@
     flex: 1;
     position: relative;
   }
-  .left h1 {
+  .left h2 {
     padding: 50px 0 0 0;
   }
   .connect img {
@@ -71,7 +71,7 @@
     height: 500px;
     width: 500px;
   }
-  .left h1 {
+  .left h2 {
     padding: 50px 0 0 0;
   }
   .param {

@@ -8,11 +8,11 @@ const SectionC = (props) => {
     <div className={styles.main}>
       <div className={styles.container}>
         <div className={styles.left}>
-          <h1>
+          <h2>
             Equal Investment
             <br />
             Opportunity For Everyone
-          </h1>
+          </h2>
           <p className={styles.param}>
             A Comprehensive platform bridging the gap between Investors and
             Investee. A Comprehensive platform bridging the gap between
