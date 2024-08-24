@@ -57,6 +57,7 @@
     background: #161b27;
     height: 100%;
     width: 100%;
+    padding: 1em;
   }
   .container {
     display: flex;
