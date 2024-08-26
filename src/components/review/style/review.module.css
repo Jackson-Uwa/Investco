@@ -30,7 +30,7 @@
     align-items: center;
     padding: 1em;
     width: 30%;
-    /* margin: auto; */
+    margin: auto;
   }
   .feed_stats {
     display: flex;

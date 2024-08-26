@@ -1,25 +1,32 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useFormik } from "formik";
 import styles from "../../styles/logs/forgot_pass.module.css";
 
 import arrow from "../../assets/arrow.png";
 import dashboard from "../../assets/new-dash.png";
 
 const ForgotPassword = (props) => {
-  const [password, setPassword] = useState("");
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+    },
+    onSubmit: (values) => {
+      console.log("User Email", values);
+    },
+    validate: (values) => {
+      let errors = {};
 
-  const changeHandler = (event) => {
-    setPassword(event.target.value);
-  };
+      if (!values.email) {
+        errors.email = "User email is required";
+      } else if (
+        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+      ) {
+        errors.email = "Ooops, invalid email address!";
+      }
 
-  const submitHandler = (event) => {
-    event.preventDefault();
-    const userLogs = {
-      pass: password,
-    };
-    console.log(userLogs);
-    setPassword("");
-  };
+      return errors;
+    },
+  });
 
   return (
     <div className={styles.forgotpass}>
@@ -29,17 +36,20 @@ const ForgotPassword = (props) => {
           <div className={styles.text}>
             No worries, we will send your reset instructions
           </div>
-          <form onSubmit={submitHandler}>
-            <label>Email</label>
+          <form onSubmit={formik.handleSubmit}>
+            <label>Email*</label>
             <input
               type="email"
               name="email"
-              required
               autoComplete="off"
-              onChange={changeHandler}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
               placeholder="Enter your email address"
-              value={password}
+              value={formik.values.email}
             />
+            {formik.touched.email && formik.errors.email && (
+              <p className={styles.error}>{formik.errors.email}</p>
+            )}
             <input
               type="submit"
               className={styles.reset}

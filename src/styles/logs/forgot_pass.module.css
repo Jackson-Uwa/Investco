@@ -85,6 +85,12 @@
     line-height: 25.9px;
     letter-spacing: 2%;
   }
+  .error {
+    color: red;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: mukta, sans-serif;
+  }
   .reset {
     background: #165bac;
     border: 1px solid #165bac;
@@ -201,6 +207,12 @@
     padding: 1em 0;
     font-weight: 500;
     letter-spacing: 0.4px;
+  }
+  .error {
+    color: red;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: mukta, sans-serif;
   }
   .reset {
     background: #165bac;

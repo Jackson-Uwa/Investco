@@ -16,7 +16,6 @@ const Review = () => {
 
   const addFeed = (newFeedBack) => {
     newFeedBack.id = uuidv4();
-    // console.log(newFeedBack);
     setFeedback([newFeedBack, ...feedback]);
   };
 
